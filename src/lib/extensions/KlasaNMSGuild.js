@@ -24,7 +24,7 @@ module.exports = Structures.extend('Guild', Guild => {
 
 			this.settings.sync().then(() => {
 				this.nms.bucket = this.settings['no-mention-spam'].mentionsAllowed;
-				this.nms.cooldown = this.settings['no-mention-spam'].timePeriod;
+				this.nms.cooldown = this.settings['no-mention-spam'].timePeriod * 1000;
 			});
 		}
 

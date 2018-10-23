@@ -11,7 +11,7 @@ module.exports = class extends Event {
 
 		const guild = this.client.guilds.get(settings.id);
 		guild.nms.bucket = guild.settings['no-mention-spam'].mentionsAllowed;
-		guild.nms.cooldown = guild.settings['no-mention-spam'].timePeriod;
+		guild.nms.cooldown = guild.settings['no-mention-spam'].timePeriod * 1000;
 	}
 
 };
