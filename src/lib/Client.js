@@ -7,7 +7,7 @@ Client.defaultGuildSchema
 	.add('no-mention-spam', folder => folder
 		.add('enabled', 'boolean', { default: false })
 		.add('mentionsAllowed', 'number', { default: 25 })
-		.add('timePeriod', 'number', { default: 7000 })
+		.add('timePeriod', 'number', { default: 7 })
 	);
 
 class NMSClient extends Client {
