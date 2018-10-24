@@ -20,7 +20,10 @@ module.exports = Structures.extend('Guild', Guild => {
 			 * @type {RateLimitManager}
 			 * @protected
 			 */
-			this.nms = new RateLimitManager(25, 7);
+			this.nms = new RateLimitManager(
+				this.settings['no-mention-spam'].mentionsAllowed,
+				this.settings['no-mention-spam'].timePeriod * 1000
+			);
 
 			if (this.client.ready) {
 				this.settings.sync().then(() => {
