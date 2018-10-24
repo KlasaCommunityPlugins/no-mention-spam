@@ -18,6 +18,9 @@ module.exports = class extends Monitor {
 		const mentions = message.mentions.users.size +
 			(message.mentions.roles.size * this.roleValue) +
 			(Number(message.mentions.everyone) * this.everyoneValue);
+
+		if (!mentions) return;
+
 		const rateLimit = message.guild.nms.acquire(message.author.id);
 
 		try {
