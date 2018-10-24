@@ -15,7 +15,7 @@ module.exports = class extends Monitor {
 	async run(message) {
 		if (!message.guild || !message.guild.settings['no-mention-spam'].enabled) return;
 
-		const mentions = message.mentions.users.filter(user => !user.bot).size +
+		const mentions = message.mentions.users.filter(user => !user.bot && user !== message.author).size +
 			(message.mentions.roles.size * this.roleValue) +
 			(Number(message.mentions.everyone) * this.everyoneValue);
 
