@@ -1,7 +1,7 @@
 const { Client, util: { mergeDefault } } = require('klasa');
 const path = require('path');
 
-const { clientOptions } = require('./util/constants'); 
+const { clientOptions } = require('./util/constants');
 
 Client.defaultGuildSchema
 	.add('no-mention-spam', folder => folder
