@@ -22,6 +22,7 @@ module.exports = class extends Monitor {
 
 		try {
 			for (let i = 0; i < mentions; i++) rateLimit.drip();
+			if (rateLimit.remaining / rateLimit.bucket < 0.20) this.client.emit('mentionSpamWarning', message);
 		} catch {
 			this.client.emit('mentionSpamExceeded', message);
 		}

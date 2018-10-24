@@ -22,10 +22,12 @@ module.exports = Structures.extend('Guild', Guild => {
 			 */
 			this.nms = new RateLimitManager(25, 7);
 
-			this.settings.sync().then(() => {
-				this.nms.bucket = this.settings['no-mention-spam'].mentionsAllowed;
-				this.nms.cooldown = this.settings['no-mention-spam'].timePeriod * 1000;
-			});
+			if (this.client.ready) {
+				this.settings.sync().then(() => {
+					this.nms.bucket = this.settings['no-mention-spam'].mentionsAllowed;
+					this.nms.cooldown = this.settings['no-mention-spam'].timePeriod * 1000;
+				});
+			}
 		}
 
 	}
