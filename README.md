@@ -1,58 +1,36 @@
-# Functions [![Build Status](https://dev.azure.com/vladfrangu/KlasaCommunityPlugins/_apis/build/status/Functions?branchName=master)](https://dev.azure.com/vladfrangu/KlasaCommunityPlugins/_build/latest?definitionId=4&branchName=master)
+# No Mention Spam [![Build Status](https://dev.azure.com/vladfrangu/KlasaCommunityPlugins/_apis/build/status/No%20Mention%20Spam?branchName=master)](https://dev.azure.com/vladfrangu/KlasaCommunityPlugins/_build/latest?definitionId=6&branchName=master)
 
-A simple Klasa plugin which adds reloadable functions to your Klasa Bot
+A Klasa plugin to seamlessly replicate no-mention-spam behavior in Klasa bots
 
 ## How To Use
 
 1. Install the plugin.
 
 ```bash
-npm i @kcp/functions
+npm i @kcp/no-mention-spam
 
 # If you use yarn
-yarn add @kcp/functions
+yarn add @kcp/no-mention-spam
 ```
 
-1. Use `@kcp/functions` in your client.
+1. Use `@kcp/no-mention-spam` in your client.
 
 ```js
 const { Client } = require("klasa");
-Client.use(require("@kcp/functions"));
-
-new Client({ aliasFunctions: { returnRun: true, prefix: "funcs", enabled: true } }).login("Your Beautiful Token");
+Client.use(require("@kcp/no-mention-spam"));
 ```
 
 If you use TypeScript
 
 ```ts
 import { Client } from 'klasa';
-import { Client as FunctionsClient } from '@kcp/functions';
+import { Client as NMSClient } from '@kcp/no-mention-spam';
 
-Client.use(FunctionsClient);
-
-new Client({ aliasFunctions: { returnRun: true, prefix: "funcs", enabled: true } }).login("Your Beautiful Token");
-```
-
-1. Create a new `function` in your `functions` folder with the name you want to access later, for example `test.js` or `test.ts`.
-
-```js
-const { Function } = require("@kcp/functions");
-
-module.exports = class extends Function {
-    run() {
-        // Your Code Here
-    }
-}
-```
-
-1. Use these functions in your bot.
-
-```js
-this.client.funcs.test();
+Client.use(NMSClient);
 ```
 
 1. ???... Enjoy!
 
 ## License
 
-This project is under the [MIT](https://github.com/KlasaCommunityPlugins/functions/blob/master/LICENSE) license.
+This project is under the [MIT](https://github.com/KlasaCommunityPlugins/no-mention-spam/blob/master/LICENSE) license.
