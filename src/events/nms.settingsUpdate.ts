@@ -5,7 +5,7 @@ export default class extends Event {
 	event = 'settingsUpdateEntry';
 
 	run(settings: Settings, updated: SettingsUpdateResultEntry[]) {
-		if (!updated.some(({ data: [key] }) => key.startsWith('no-mention-spam'))) return;
+		if (updated.every(({ data: [key] }) => !key.startsWith('no-mention-spam'))) return;
 
 		const guild = this.client.guilds.get(settings.id)!;
 		guild.nms.bucket = guild.settings.get('no-mention-spam.mentionsAllowed');
