@@ -1,4 +1,4 @@
-# No Mention Spam [![Build Status](https://dev.azure.com/vladfrangu/KlasaCommunityPlugins/_apis/build/status/No%20Mention%20Spam?branchName=master)](https://dev.azure.com/vladfrangu/KlasaCommunityPlugins/_build/latest?definitionId=6&branchName=master)
+# No Mention Spam [![Build Status](https://dev.azure.com/klasacommunityplugins/Plugins/_apis/build/status/No%20Mention%20Spam?branchName=master)](https://dev.azure.com/klasacommunityplugins/Plugins/_build/latest?definitionId=4&branchName=master)
 
 A Klasa plugin to seamlessly replicate no-mention-spam behavior in Klasa bots
 
