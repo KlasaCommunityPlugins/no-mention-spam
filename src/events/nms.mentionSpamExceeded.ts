@@ -1,7 +1,7 @@
 // Copyright (c) 2018-2019 KlasaCommunityPlugins. All rights reserved. MIT license.
 import { Event, KlasaMessage } from 'klasa';
 
-export default class extends Event {
+export default class NMSMentionSpamExceeded extends Event {
 	event = 'mentionSpamExceeded';
 
 	async run(message: KlasaMessage) {

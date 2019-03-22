@@ -1,7 +1,7 @@
 // Copyright (c) 2018-2019 KlasaCommunityPlugins. All rights reserved. MIT license.
 import { Event } from 'klasa';
 
-export default class extends Event {
+export default class NMSKlasaReady extends Event {
 	event = 'klasaReady';
 	once = true;
 

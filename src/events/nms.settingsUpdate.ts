@@ -1,7 +1,7 @@
 // Copyright (c) 2018-2019 KlasaCommunityPlugins. All rights reserved. MIT license.
 import { Event, Settings, SettingsUpdateResultEntry } from 'klasa';
 
-export default class extends Event {
+export default class NMSSettingsUpdateEntry extends Event {
 	event = 'settingsUpdateEntry';
 
 	run(settings: Settings, updated: SettingsUpdateResultEntry[]) {

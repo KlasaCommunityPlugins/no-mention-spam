@@ -1,7 +1,7 @@
 // Copyright (c) 2018-2019 KlasaCommunityPlugins. All rights reserved. MIT license.
 import { Client, KlasaMessage, Monitor, MonitorStore } from 'klasa';
 
-export default class extends Monitor {
+export default class NMSMonitor extends Monitor {
 	private readonly roleValue = this.client.options.nms.role;
 	private readonly everyoneValue = this.client.options.nms.everyone;
 
