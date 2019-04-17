@@ -18,7 +18,7 @@ export default class NMSMonitor extends Monitor {
 
 		if (!mentions) return;
 
-		const ratelimit = message.guild.nms.acquire(message.author.id);
+		const ratelimit = message.guild.nms.acquire(message.author!.id);
 
 		try {
 			for (let i = 0; i < mentions; i++) ratelimit.drip();
