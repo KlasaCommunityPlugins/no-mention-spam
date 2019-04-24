@@ -27,16 +27,15 @@ export class NoMentionSpamClient extends Client {
 		this.constructor[Client.plugin].call(this);
 	}
 
-	static [Client.plugin]() {
-		const typedThis = this as unknown as NoMentionSpamClient;
-		util.mergeDefault(OPTIONS, typedThis.options);
+	static [Client.plugin](this: NoMentionSpamClient) {
+		util.mergeDefault(OPTIONS, this.options);
 
 		const coreDirectory = join(__dirname, '../');
 
 		// @ts-ignore
-		typedThis.monitors.registerCoreDirectory(coreDirectory);
+		this.monitors.registerCoreDirectory(coreDirectory);
 		// @ts-ignore
-		typedThis.events.registerCoreDirectory(coreDirectory);
+		this.events.registerCoreDirectory(coreDirectory);
 	}
 }
 
