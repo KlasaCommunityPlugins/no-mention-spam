@@ -1,8 +1,8 @@
 // Copyright (c) 2018-2019 KlasaCommunityPlugins. All rights reserved. MIT license.
-import { Client, Guild, Structures } from 'discord.js';
+import { Client, Structures } from 'discord.js';
 import { RateLimitManager } from 'klasa';
 
-class NMSGuild extends Guild {
+class NMSGuild extends Structures.get('Guild') {
 	/**
 	 * The ratelimit management for the no-mention-spam behavior
 	 * @since 0.0.1
