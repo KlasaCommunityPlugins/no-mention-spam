@@ -1,6 +1,6 @@
 {
   "name": "@kcp/no-mention-spam",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "A klasa plugin to seamlessly replicate no-mention-spam behavior in Klasa bots",
   "homepage": "https://github.com/KlasaCommunityPlugins/no-mention-spam",
   "bugs": {
